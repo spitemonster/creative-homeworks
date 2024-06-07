@@ -1,0 +1,33 @@
+.image-scroller {
+    overflow: clip;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: max-content;
+
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        li {
+            flex-shrink: 0;
+            margin: 0;
+        }
+    }
+
+    @media not (prefers-reduced-motion: reduce) {
+        &.initialized {
+            ul {
+                animation: scroll 20s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}

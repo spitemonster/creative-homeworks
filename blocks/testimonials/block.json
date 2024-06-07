@@ -1,0 +1,23 @@
+{
+    "apiVersion": 2,
+    "name": "testimonials",
+    "title": "Testimonial Grid",
+    "description": "Display a number of testimonials.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "testimonials.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true
+    },
+    "script": "testimonials",
+    "style": "testimonials"
+}

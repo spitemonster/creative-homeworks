@@ -1,0 +1,10 @@
+.editor-styles-wrapper {
+    .wp-block-acf-image-scroller {
+        background: red !important;
+        ul {
+            li {
+                margin-top: 0 !important;
+            }
+        }
+    }
+}

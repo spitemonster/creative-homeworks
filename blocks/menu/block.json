@@ -1,0 +1,23 @@
+{
+	"apiVersion": 2,
+	"name": "menu",
+	"title": "Menu",
+	"description": "Display a Wordpress menu.",
+	"category": "",
+	"icon": "",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "menu.php"
+	},
+	"supports": {
+		"color" : {
+			"text" : true,
+			"background" : true,
+			"gradients" : true
+		},
+		"background" : true,
+		"anchor": true
+	},
+	"script": "menu",
+	"style": "menu"
+}

@@ -1,0 +1,23 @@
+{
+	"apiVersion": 2,
+	"name": "posts-grid",
+	"title": "Posts Grid",
+	"description": "Display any number of posts in a grid, with options for max-count or pagination.",
+	"category": "",
+	"icon": "",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "posts-grid.php"
+	},
+	"supports": {
+		"color" : {
+			"text" : true,
+			"background" : true,
+			"gradients" : true
+		},
+		"background" : true,
+		"anchor": true
+	},
+	"script": "posts-grid",
+	"style": "posts-grid"
+}

@@ -1,0 +1,45 @@
+{
+    "key": "group_6660e47036402",
+    "title": "Block: Post Query Custom Field",
+    "fields": [
+        {
+            "key": "field_6660e4702773b",
+            "label": "Custom Field Name",
+            "name": "custom_field",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the name of the field from which you would like to display content.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/post-query-custom-field"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717626013
+}

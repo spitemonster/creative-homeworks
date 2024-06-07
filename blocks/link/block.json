@@ -1,0 +1,24 @@
+{
+    "apiVersion": 2,
+    "name": "link",
+    "title": "Link",
+    "description": "Wrap a block in a link.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "link.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true,
+        "jsx": true
+    },
+    "script": "link",
+    "style": "link"
+}

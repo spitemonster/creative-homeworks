@@ -1,0 +1,23 @@
+{
+	"apiVersion": 2,
+	"name": "breakout-image",
+	"title": "Breakout Image",
+	"description": "Add an image that breaks out of its column and fills the parent group, with optional size and positioning.",
+	"category": "",
+	"icon": "",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "breakout-image.php"
+	},
+	"supports": {
+		"color" : {
+			"text" : true,
+			"background" : true,
+			"gradients" : true
+		},
+		"background" : true,
+		"anchor": true
+	},
+	"script": "breakout-image",
+	"style": "breakout-image"
+}

@@ -1,0 +1,51 @@
+.faq {
+    details {
+        border-bottom: 1px solid var(--wp--preset--color--light-gray);
+        padding-bottom: var(--wp--preset--spacing--small);
+
+        & + & {
+            margin-top: 1rem;
+        }
+        summary {
+            font-size: var(--wp--preset--font-size--h-6);
+            font-weight: bold;
+
+            cursor: pointer;
+            list-style: none;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 2rem;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &::after {
+                content: '+';
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                aspect-ratio: 1/1;
+                width: 2rem;
+                height: 2rem;
+                color: var(--wp--preset--color--light-gray);
+                flex-shrink: 0;
+                flex-grow: 0;
+                transform: translateX(2rem);
+                border: 2px solid var(--wp--preset--color--light-gray);
+                border-radius: 50%;
+            }
+        }
+
+        &[open] {
+            summary {
+                &::after {
+                    content: '-';
+                }
+
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

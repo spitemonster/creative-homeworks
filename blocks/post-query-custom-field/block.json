@@ -1,0 +1,23 @@
+{
+    "apiVersion": 2,
+    "name": "post-query-custom-field",
+    "title": "Post Query Custom Field",
+    "description": "Display the content of a custom field in the Query Loop block.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "post-query custom field.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true
+    },
+    "script": "post-query-custom-field",
+    "style": "post-query-custom-field"
+}

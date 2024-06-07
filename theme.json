@@ -1,0 +1,300 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "title": "Creative Homeworks",
+    "settings": {
+        "layout": {
+            "contentSize": "1140px",
+            "wideSize": "1440px"
+        },
+        "spacing": {
+            "units": ["rem", "em"],
+            "blockGap": true,
+            "spacingSizes": [
+                {
+                    "name": "3X-Small",
+                    "size": ".25rem",
+                    "slug": "xxxsmall"
+                },
+                {
+                    "name": "2X-Small",
+                    "size": ".5rem",
+                    "slug": "xxsmall"
+                },
+                {
+                    "name": "X-Small",
+                    "size": ".75rem",
+                    "slug": "xsmall"
+                },
+                {
+                    "name": "Small",
+                    "size": "1rem",
+                    "slug": "small"
+                },
+                {
+                    "name": "Medium",
+                    "size": "1.5rem",
+                    "slug": "medium"
+                },
+                {
+                    "name": "Large",
+                    "size": "2rem",
+                    "slug": "large"
+                },
+                {
+                    "name": "X-Large",
+                    "size": "3rem",
+                    "slug": "xlarge"
+                },
+                {
+                    "name": "2X-Large",
+                    "size": "4rem",
+                    "slug": "xxlarge"
+                },
+                {
+                    "name": "3X-Large",
+                    "size": "6rem",
+                    "slug": "xxxlarge"
+                }
+            ]
+        },
+        "shadow": {
+            "defaultPresets": false
+        },
+        "color": {
+            "defaultDuotone": false,
+            "defaultGradients": false,
+            "defaultPalette": false,
+            "custom": false,
+            "palette": [
+                {
+                    "color": "#000000",
+                    "name": "Black",
+                    "slug": "black"
+                },
+                {
+                    "color": "#222222",
+                    "name": "Dark Gray",
+                    "slug": "dark-gray"
+                },
+                {
+                    "color": "#425466",
+                    "name": "Slate Gray",
+                    "slug": "slate-gray"
+                },
+                {
+                    "color": "#808080",
+                    "name": "Medium Gray",
+                    "slug": "med-gray"
+                },
+                {
+                    "color": "#C1C1C1",
+                    "name": "Light Gray",
+                    "slug": "light-gray"
+                },
+                {
+                    "color": "#F5F5F5",
+                    "name": "White",
+                    "slug": "white"
+                },
+                {
+                    "color": "#ffffff",
+                    "name": "Full White",
+                    "slug": "full-white"
+                },
+                {
+                    "color": "#FFFFFF",
+                    "name": "Full White",
+                    "slug": "full-white"
+                },
+                {
+                    "color": "#28AAE2",
+                    "name": "Light Blue",
+                    "slug": "light-blue"
+                },
+                {
+                    "color": "#0173E6",
+                    "name": "Medium Blue",
+                    "slug": "med-blue"
+                },
+                {
+                    "color": "#0A2540",
+                    "name": "Dark Blue",
+                    "slug": "dark-blue"
+                },
+                {
+                    "color": "#262262",
+                    "name": "Purple",
+                    "slug": "purple"
+                },
+                {
+                    "color": "#03E417",
+                    "name": "Light Green",
+                    "slug": "light-green"
+                }
+            ]
+        },
+        "typography": {
+            "fontSizes": [
+                {
+                    "name": "Base",
+                    "slug": "base",
+                    "size": "1rem"
+                },
+                {
+                    "name": "X-Small",
+                    "slug": "xsmall",
+                    "size": ".694rem"
+                },
+                {
+                    "name": "Small",
+                    "slug": "small",
+                    "size": ".833rem"
+                },
+                {
+                    "name": "H6",
+                    "slug": "h6",
+                    "size": "1.2rem"
+                },
+                {
+                    "name": "H5",
+                    "slug": "h5",
+                    "size": "1.44rem"
+                },
+                {
+                    "name": "H4",
+                    "slug": "h4",
+                    "size": "1.728rem"
+                },
+                {
+                    "name": "H3",
+                    "slug": "h3",
+                    "size": "2.074rem"
+                },
+                {
+                    "name": "H2",
+                    "slug": "h2",
+                    "size": "2.488rem"
+                },
+                {
+                    "name": "H1",
+                    "slug": "h1",
+                    "size": "2.986rem"
+                }
+            ],
+            "fontFamilies": [
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Poppins",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/poppins/Poppins-Bold.ttf"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Poppins",
+                            "fontStyle": "normal",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./assets/fonts/poppins/Poppins-Medium.ttf"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Poppins",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/poppins/Poppins-Regular.ttf"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"Poppins\", sans-serif",
+                    "name": "Poppins",
+                    "slug": "body"
+                }
+            ]
+        },
+        "blocks": {
+            "core/query": {
+                "appearanceTools": true
+            },
+            "core/button": {
+                "spacing": {
+                    "margin": true
+                }
+            },
+            "core/buttons": {
+                "spacing": {
+                    "margin": true
+                }
+            },
+            "core/group": {
+                "spacing": {
+                    "margin": true,
+                    "padding": true
+                },
+                "border": {
+                    "color": true,
+                    "radius": true,
+                    "width": true
+                },
+                "background": {
+                    "backgroundImage": true,
+                    "backgroundSize": true
+                },
+                "color": {
+                    "background": true
+                }
+            },
+            "core/paragraph": {
+                "spacing": {
+                    "margin": true,
+                    "padding": true
+                }
+            },
+            "core/heading": {
+                "spacing": {
+                    "margin": true,
+                    "padding": true
+                }
+            },
+            "core/row": {
+                "spacing": {
+                    "blockGap": true
+                }
+            },
+            "core/columns": {
+                "spacing": {
+                    "blockGap": true
+                }
+            }
+        }
+    },
+    "styles": {
+        "color": {
+            "text": "var(--wp--preset--color--dark-blue)"
+        },
+        "typography": {
+            "fontFamily": "Poppins"
+        },
+        "blocks": {
+            "core/button": {
+                "border": {
+                    "radius": "0"
+                }
+            },
+            "core/group": {
+                "spacing": {
+                    "padding": {
+                        "top": "var(--wp--preset--spacing--xxlarge)",
+                        "bottom": "var(--wp--preset--spacing--xxlarge)",
+                        "left": "0",
+                        "right": "0"
+                    }
+                }
+            }
+        }
+    }
+}

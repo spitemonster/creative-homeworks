@@ -1,0 +1,23 @@
+{
+    "apiVersion": 2,
+    "name": "image-scroller",
+    "title": "Image Scroller",
+    "description": "Display a list of images in an infinite horizontal scroll.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image-scroller.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true
+    },
+    "script": "image-scroller",
+    "style": "image-scroller"
+}

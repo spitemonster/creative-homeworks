@@ -1,0 +1,23 @@
+{
+	"apiVersion": 2,
+	"name": "post-card",
+	"title": "Post Card",
+	"description": "Display a card for a single post of any type.",
+	"category": "",
+	"icon": "",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "post-card.php"
+	},
+	"supports": {
+		"color" : {
+			"text" : true,
+			"background" : true,
+			"gradients" : true
+		},
+		"background" : true,
+		"anchor": true
+	},
+	"script": "post-card",
+	"style": "post-card"
+}

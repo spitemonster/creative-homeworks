@@ -1,0 +1,23 @@
+{
+    "apiVersion": 2,
+    "name": "icon",
+    "title": "Icon",
+    "description": "Display an icon from a list.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "icon.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true
+    },
+    "script": "icon",
+    "style": "icon"
+}

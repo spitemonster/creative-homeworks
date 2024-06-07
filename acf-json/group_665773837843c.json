@@ -1,0 +1,110 @@
+{
+    "key": "group_665773837843c",
+    "title": "Site Setting: Announcement Bar",
+    "fields": [
+        {
+            "key": "field_665774097e51a",
+            "label": "Display Announcement Bar",
+            "name": "display_announcement_bar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable if you would like to display the announcement bar.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_66577383517c2",
+            "label": "Announcement Content",
+            "name": "announcement_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Enter any content you would like to display inside the announcement bar. If left blank, the announcement bar will not display.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_665774097e51a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_665779a05ad48",
+            "label": "Announcement Bar Link",
+            "name": "announcement_bar_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "If you would like the whole announcement bar to link elsewhere, enter the link here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_665779be5ad49",
+            "label": "Can Be Closed?",
+            "name": "announcement_bar_can_close",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable if you would like to allow the user to close the announcement bar. If so and the user closes it, it will remain closed for the duration of their current session.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717009310
+}

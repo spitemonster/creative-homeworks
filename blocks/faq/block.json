@@ -1,0 +1,23 @@
+{
+	"apiVersion": 2,
+	"name": "faq",
+	"title": "FAQ",
+	"description": "Display all or a selection of FAQ posts.",
+	"category": "",
+	"icon": "",
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "faq.php"
+	},
+	"supports": {
+		"color" : {
+			"text" : true,
+			"background" : true,
+			"gradients" : true
+		},
+		"background" : true,
+		"anchor": true
+	},
+	"script": "faq",
+	"style": "faq"
+}

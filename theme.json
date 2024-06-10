@@ -68,69 +68,94 @@
             "custom": false,
             "palette": [
                 {
-                    "color": "#000000",
+                    "color": "rgba(0,0,0,1)",
                     "name": "Black",
                     "slug": "black"
                 },
                 {
-                    "color": "#222222",
+                    "color": "rgb(34, 34, 34, 1)",
                     "name": "Dark Gray",
                     "slug": "dark-gray"
                 },
                 {
-                    "color": "#425466",
+                    "color": "rgb(66, 84, 102, 1)",
                     "name": "Slate Gray",
                     "slug": "slate-gray"
                 },
                 {
-                    "color": "#808080",
+                    "color": "rgb(128, 128, 128, 1)",
                     "name": "Medium Gray",
                     "slug": "med-gray"
                 },
                 {
-                    "color": "#C1C1C1",
+                    "color": "rgb(193, 193, 193, 1)",
                     "name": "Light Gray",
                     "slug": "light-gray"
                 },
                 {
-                    "color": "#F5F5F5",
+                    "color": "rgb(245, 245, 245, 1)",
                     "name": "White",
                     "slug": "white"
                 },
                 {
-                    "color": "#ffffff",
+                    "color": "rgb(255, 255, 255, 1)",
                     "name": "Full White",
                     "slug": "full-white"
                 },
                 {
-                    "color": "#FFFFFF",
+                    "color": "rgb(255, 255, 255, 1)",
                     "name": "Full White",
                     "slug": "full-white"
                 },
                 {
-                    "color": "#28AAE2",
+                    "color": "rgb(40, 170, 226, 1)",
                     "name": "Light Blue",
                     "slug": "light-blue"
                 },
                 {
-                    "color": "#0173E6",
-                    "name": "Medium Blue",
-                    "slug": "med-blue"
-                },
-                {
-                    "color": "#0A2540",
+                    "color": "rgb(10, 37, 64, 1)",
                     "name": "Dark Blue",
                     "slug": "dark-blue"
                 },
                 {
-                    "color": "#262262",
+                    "color": "rgb(1, 115, 230, 1)",
+                    "name": "Medium Blue",
+                    "slug": "med-blue"
+                },
+                {
+                    "color": "rgb(1, 115, 230, .2)",
+                    "name": "Translucent Blue",
+                    "slug": "trans-blue"
+                },
+                {
+                    "color": "rgb(102, 41, 95)",
                     "name": "Purple",
                     "slug": "purple"
                 },
                 {
-                    "color": "#03E417",
-                    "name": "Light Green",
-                    "slug": "light-green"
+                    "color": "rgba(102, 41, 95, .2)",
+                    "name": "Translucent Purple",
+                    "slug": "trans-purple"
+                },
+                {
+                    "color": "rgb(99, 163, 117)",
+                    "name": "Green",
+                    "slug": "green"
+                },
+                {
+                    "color": "rgb(99, 163, 117, .2)",
+                    "name": "Translucent Green",
+                    "slug": "trans-green"
+                },
+                {
+                    "color": "rgb(255, 155, 66)",
+                    "name": "Orange",
+                    "slug": "orange"
+                },
+                {
+                    "color": "rgb(255, 155, 66, .2)",
+                    "name": "Translucent Orange",
+                    "slug": "trans-orange"
                 }
             ]
         },
@@ -268,6 +293,14 @@
             "core/columns": {
                 "spacing": {
                     "blockGap": true
+                }
+            },
+            "core/image": {
+                "border": {
+                    "width": true,
+                    "style": true,
+                    "color": true,
+                    "radius": true
                 }
             }
         }

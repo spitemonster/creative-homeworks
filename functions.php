@@ -81,6 +81,27 @@ add_action("wp_body_open", function() {
 	}
 });
 
+// add_action("wp_get_attachment_image_src", function($image, $attachment_id, $size, $icon) {
+
+// 	$image[0] = "https://placehold.co/600x400";
+// 	return $image;
+// }, 10, 4);
+
+
+   add_filter( 'post_thumbnail_html', function( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+	if ( empty( $html ) ) {
+		$image = wp_get_attachment_image_url(get_field("fallback_image", "options"), 'medium');
+	   return sprintf(
+		   '<img src="%s" height="%s" width="%s" />',
+		   $image,
+		   get_option( 'thumbnail_size_w' ),
+		   get_option( 'thumbnail_size_h' )
+	   );
+   }
+   
+   return $html;
+   }, 20, 5 );
+
 register_block_style(
 	'core/group',
 	array(
@@ -105,8 +126,24 @@ register_block_style(
 	)
 );
 
+register_block_style(
+	'core/post-featured-image',
+	array(
+		'name'  => 'rounded-top',
+		'label' => __( 'Rounded Top', 'textdomain' ),
+	)
+);
+
+register_block_style('core/list-item', array(
+	array(
+		'name' => 'star-marker',
+		'label' => __( 'Star Marker', 'textdomain' ),
+	)
+));
+
 
 register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'textdomain'),
     'footer_navigation' => __('Footer Navigation', 'textdomain'),
 ]);
+

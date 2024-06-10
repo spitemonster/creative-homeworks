@@ -1,6 +1,13 @@
 import '@appnest/masonry-layout'
 
 window.addEventListener('DOMContentLoaded', () => {
+    const isEditor =
+        typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined'
+
+    if (isEditor) {
+        console.log('is editor')
+    }
+
     const header = document.querySelector('.site-header')
     const announcementBar = document.querySelector('.announcement-bar')
     const annoumcenetBarClose = document.querySelector(
@@ -31,4 +38,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
         announcementBar.classList.remove('show')
     })
+
+    const tags = document.querySelectorAll('.wp-block-post-terms a')
+
+    let prev = 6
+    const tagColorOptions = [
+        'tag-blue',
+        'tag-green',
+        'tag-purple',
+        'tag-orange',
+    ]
+    tags.forEach((t) => {
+        let randi = Math.floor(Math.random() * tagColorOptions.length)
+
+        while (randi == prev) {
+            randi = Math.floor(Math.random() * tagColorOptions.length)
+        }
+
+        prev = randi
+
+        const rand = tagColorOptions[randi]
+
+        t.classList.add(rand)
+    })
+
+    if (isEditor) {
+        const linkBlocks = document.querySelectorAll('.link-block')
+        linkBlocks.forEach((l) => {
+            l.addEventListener('click', (e) => {
+                e.preventDefault()
+            })
+        })
+    }
 })

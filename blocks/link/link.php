@@ -5,7 +5,7 @@
 		"block" => null,
 		"is_preview" => null,
 		"class_name" => null,
-		"style" => ''
+		"style" => ""
 	]));
 
 	$class = implode(" ", array_filter([
@@ -26,7 +26,7 @@
 	if(!empty($url)):
 ?>
 
-<a <?= $att_string; ?> href="<?= $url; ?>">
+<a <?= $att_string; ?> href="<?= $url; ?>" >
 	<InnerBlocks/>
 </a>
 <?php elseif ($is_preview): ?>

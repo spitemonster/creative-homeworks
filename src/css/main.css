@@ -50,6 +50,7 @@ select {
     --font-size-base: 20px;
     font-size: var(--font-size-base);
     line-height: 1.5;
+    counter-reset: tags;
 }
 
 p,
@@ -95,10 +96,6 @@ li {
     }
 }
 
-img {
-    border-radius: var(--wp--preset--spacing--xxsmall);
-}
-
 :where(body .is-layout-constrained) > * {
     margin-block-start: unset;
     margin-block-end: unset;
@@ -119,10 +116,86 @@ img {
             margin-right: auto !important;
         }
     }
+
+    > .wp-block-post-featured-image {
+        margin-inline: 0 !important;
+        margin-inline: -1px !important;
+        margin-block: -1px !important;
+    }
 }
 
-.wp-block-image.is-style-grayscale {
-    filter: grayscale(100%);
+.wp-block-post-featured-image.is-style-rounded-top {
+    border-top-left-radius: var(--wp--preset--font-size--xsmall);
+    border-top-right-radius: var(--wp--preset--font-size--xsmall);
+    overflow: clip;
+}
+
+.wp-block-post-featured-image + .wp-block-group {
+    margin-inline: 0 !important;
+    height: 100%;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+
+    .wp-block-post-title,
+    .wp-block-post-excerpt {
+        margin-bottom: var(--wp--preset--spacing--small);
+    }
+
+    .wp-block-post-title {
+        flex-shrink: 1;
+    }
+
+    .wp-block-post-excerpt {
+        height: 100%;
+        flex-shrink: 1;
+    }
+
+    .wp-block-post-terms {
+        margin: 0 !important;
+
+        a {
+            line-height: 1;
+            counter-increment: tags;
+            font-size: var(--wp--preset--font-size--xsmall);
+            text-decoration: none;
+            border: 2px solid currentColor;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            border-color: currentColor;
+
+            &.tag-green {
+                color: var(--wp--preset--color--green);
+                background: var(--wp--preset--color--trans-green);
+                border-color: currentColor;
+            }
+
+            &.tag-blue {
+                color: var(--wp--preset--color--med-blue);
+                background: var(--wp--preset--color--trans-blue);
+            }
+
+            &.tag-purple {
+                color: var(--wp--preset--color--purple);
+                background: var(--wp--preset--color--trans-purple);
+            }
+
+            &.tag-orange {
+                color: var(--wp--preset--color--orange);
+                background: var(--wp--preset--color--trans-orange);
+            }
+        }
+    }
+}
+
+.wp-block-image {
+    img {
+        border-radius: var(--wp--preset--spacing--xxsmall);
+    }
+
+    &.is-style-grayscale {
+        filter: grayscale(100%);
+    }
 }
 
 .wp-block-quote {
@@ -554,9 +627,15 @@ masonry-layout {
     }
 }
 
-.wp-block-post-template li > .wp-block-group {
+.wp-block-post-template li > .wp-block-group.case-study-card {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.wp-block-post-template li > .wp-block-group.testimonial-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }

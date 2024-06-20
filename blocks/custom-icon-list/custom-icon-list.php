@@ -1,6 +1,3 @@
----
-to: blocks/<%= title.toLowerCase().replaceAll(' ', '-') %>/<%= title.toLowerCase().replaceAll(' ', '-') %>.php
----
 <?php
 
 	extract(wp_parse_args($args, [
@@ -12,7 +9,7 @@ to: blocks/<%= title.toLowerCase().replaceAll(' ', '-') %>/<%= title.toLowerCase
 	]));
 
 	$class = implode(" ", array_filter([
-		"<%= title.toLowerCase().replaceAll(' ', '-') %>",
+		"custom-icon-list",
 		$class_name
 	]));
 
@@ -23,13 +20,19 @@ to: blocks/<%= title.toLowerCase().replaceAll(' ', '-') %>/<%= title.toLowerCase
 		return "$key='$value'";
 	}, array_keys($atts), $atts));
 
+	$items = get_field("items");
+
 	// Add a condition here for the block to render; this is just a placeholder
-	if(!empty($att_string)):
+	if(!empty($items)):
 ?>
 
-	<div <?= $att_string ?>>
-		<p><%= title %></p>
-	</div>
+	<ul <?= $att_string ?>>
+		<?php foreach ($items as $item): ?>
+			<li data-icon="<?= $item["icon"]; ?>">
+				<?= $item["content"]; ?>
+			</li>
+		<?php endforeach; ?>
+	</ul>
 
 <?php elseif ($is_preview): ?>
 	<p class="d-inline-block p-2 border border-danger text-danger">Please populate all required fields to preview.</p>

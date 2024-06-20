@@ -4,13 +4,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const isEditor =
         typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined'
 
-    if (isEditor) {
-        console.log('is editor')
-    }
-
     const header = document.querySelector('.site-header')
     const announcementBar = document.querySelector('.announcement-bar')
-    const annoumcenetBarClose = document.querySelector(
+    const announcementBarClose = document.querySelector(
         '.announcement-bar__close'
     )
 
@@ -31,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    annoumcenetBarClose.addEventListener('click', (e) => {
+    announcementBarClose.addEventListener('click', (e) => {
         e.preventDefault()
         e.stopPropagation()
         sessionStorage.setItem('announcement-bar-closed', true)
@@ -48,9 +44,10 @@ window.addEventListener('DOMContentLoaded', () => {
         'tag-purple',
         'tag-orange',
     ]
+
     tags.forEach((t) => {
         let randi = Math.floor(Math.random() * tagColorOptions.length)
-
+        // ensure no two colors end up in a row
         while (randi == prev) {
             randi = Math.floor(Math.random() * tagColorOptions.length)
         }

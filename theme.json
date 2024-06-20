@@ -157,6 +157,58 @@
                     "name": "Translucent Orange",
                     "slug": "trans-orange"
                 }
+            ],
+            "gradients": [
+                {
+                    "name": "Medium Blue Right",
+                    "slug": "med-blue-right",
+                    "gradient": "linear-gradient(90deg, white 50%, var(--wp--preset--color--med-blue) 50%)"
+                },
+                {
+                    "name": "Medium Blue Left",
+                    "slug": "med-blue-left",
+                    "gradient": "linear-gradient(90deg, var(--wp--preset--color--med-blue) 50%, white 50%)"
+                },
+                {
+                    "name": "Dark Blue Right",
+                    "slug": "dark-blue-right",
+                    "gradient": "linear-gradient(90deg, white 50%, var(--wp--preset--color--dark-blue) 50%)"
+                },
+                {
+                    "name": "Dark Blue Left",
+                    "slug": "dark-blue-left",
+                    "gradient": "linear-gradient(90deg, var(--wp--preset--color--dark-blue) 50%, white 50%)"
+                },
+                {
+                    "name": "Purple Right",
+                    "slug": "purple-right",
+                    "gradient": "linear-gradient(90deg, white 50%, var(--wp--preset--color--purple) 50%)"
+                },
+                {
+                    "name": "Purple Left",
+                    "slug": "purple-left",
+                    "gradient": "linear-gradient(90deg, var(--wp--preset--color--purple) 50%, white 50%)"
+                },
+                {
+                    "name": "Green Right",
+                    "slug": "green-right",
+                    "gradient": "linear-gradient(90deg, white 50%, var(--wp--preset--color--green) 50%)"
+                },
+                {
+                    "name": "Green Left",
+                    "slug": "green-left",
+                    "gradient": "linear-gradient(90deg, var(--wp--preset--color--green) 50%, white 50%)"
+                },
+                {
+                    "name": "Orange Right",
+                    "slug": "orange-right",
+                    "gradient": "linear-gradient(90deg, white 50%, var(--wp--preset--color--orange) 50%)"
+                },
+                {
+                    "name": "Orange Left",
+                    "slug": "orange-left",
+                    "gradient": "linear-gradient(90deg, var(--wp--preset--color--orange) 50%, white 50%)"
+                }
             ]
         },
         "typography": {
@@ -237,6 +289,45 @@
                     ],
                     "fontFamily": "\"Poppins\", sans-serif",
                     "name": "Poppins",
+                    "slug": "heading"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "IBM Plex Sans",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex/IBMPlexSans-Bold.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "IBM Plex Sans",
+                            "fontStyle": "italic",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex/IBMPlexSans-BoldItalic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "IBM Plex Sans",
+                            "fontStyle": "normal",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex/IBMPlexSans-Regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "IBM Plex Sans",
+                            "fontStyle": "italic",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./assets/fonts/ibm-plex/IBMPlexSans-Italic.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"IBM Plex Sans\", sans-serif",
+                    "name": "IBM Plex",
                     "slug": "body"
                 }
             ]
@@ -248,6 +339,9 @@
             "core/button": {
                 "spacing": {
                     "margin": true
+                },
+                "border": {
+                    "color": true
                 }
             },
             "core/buttons": {
@@ -301,6 +395,11 @@
                     "style": true,
                     "color": true,
                     "radius": true
+                }
+            },
+            "core/gallery": {
+                "color": {
+                    "caption": true
                 }
             }
         }

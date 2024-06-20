@@ -1,0 +1,22 @@
+{
+    "apiVersion": 2,
+    "name": "custom-icon-list",
+    "title": "Custom Icon List",
+    "description": "Display a list of items with custom icons for each item.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "custom-icon-list.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true
+    },
+    "style": "custom-icon-list"
+}

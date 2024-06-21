@@ -337,7 +337,7 @@ header {
 
 .announcement-bar {
     position: relative;
-    padding-block: var(--wp--preset--spacing--xsmall);
+    padding-block: var(--wp--preset--spacing--xxsmall);
     background: var(--wp--preset--color--dark-blue);
     color: var(--wp--preset--color--white);
     fill: var(--wp--preset--color--white);
@@ -355,7 +355,7 @@ header {
         margin: 0;
         padding: 0;
         aspect-ratio: 1/1;
-        width: 24px;
+        width: 0.75rem;
         color: currentColor;
         position: absolute;
         top: 50%;
@@ -363,6 +363,10 @@ header {
         transform: translateY(-50%);
         z-index: 3;
         cursor: pointer;
+
+        svg {
+            height: 100%;
+        }
     }
 
     p {
@@ -752,5 +756,25 @@ ul.custom-icon-list {
             var(--wp--preset--color--orange) 50%,
             white 50%
         ) !important;
+    }
+}
+
+.stars {
+    position: relative;
+
+    path {
+        fill: var(--wp--preset--color--orange);
+    }
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: calc((1 - var(--rating) / 5) * 100%);
+        /* background: red; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        backdrop-filter: grayscale(100%);
     }
 }

@@ -1,0 +1,23 @@
+{
+    "apiVersion": 2,
+    "name": "stars",
+    "title": "Stars",
+    "description": "Display 5 SVG stars with a custom rating.",
+    "category": "",
+    "icon": "",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "stars.php"
+    },
+    "supports": {
+        "color": {
+            "text": true,
+            "background": true,
+            "gradients": true
+        },
+        "background": true,
+        "anchor": true
+    },
+    "script": "stars",
+    "style": "stars"
+}

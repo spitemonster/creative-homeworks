@@ -20,6 +20,53 @@ array_map(
     ]
 );
 
+add_action('init', function() {
+	register_block_style(
+		'core/group',
+		array(
+			'name'  => 'breakout',
+			'label' => __( 'Breakout', 'textdomain' ),
+		)
+	);
+
+	register_block_style(
+		'core/group',
+		array(
+			'name'  => 'constrained',
+			'label' => __( 'Constrained', 'textdomain' ),
+		)
+	);
+
+	register_block_style(
+		'core/image',
+		array(
+			'name'  => 'grayscale',
+			'label' => __( 'Grayscale', 'textdomain' ),
+		)
+	);
+
+	register_block_style(
+		'core/post-featured-image',
+		array(
+			'name'  => 'rounded-top',
+			'label' => __( 'Rounded Top', 'textdomain' ),
+		)
+	);
+
+	register_block_style(
+		'core/media-text',
+		array(
+			'name' => 'image-fill',
+			'label' => __('Image Fill', 'textdomain')
+		)
+	);
+
+	register_nav_menus([
+		'primary_navigation' => __('Primary Navigation', 'textdomain'),
+		'footer_navigation' => __('Footer Navigation', 'textdomain'),
+	]);
+});
+
 add_action('after_setup_theme', function () {
     add_post_type_support('page', 'excerpt');
     add_theme_support('title-tag');
@@ -56,14 +103,15 @@ add_action(
     function () {
         wp_enqueue_style(
             'main-css',
-            asset_path('/css/main.css'),
+            asset_path('css/main.css'),
             [],
             THEME_VERSION,
             'all'
         );
+		
         wp_enqueue_script_module(
             'main-js',
-            asset_path('/js/main.js'),
+            asset_path('js/main.js'),
             [],
             THEME_VERSION,
             true
@@ -73,77 +121,23 @@ add_action(
 );
 
 add_action("wp_body_open", function() {
-	$show_announcement_bar = get_field("display_announcement_bar", "options") == "true";
+	$show_announcement_bar = function_exists('get_field') ? get_field("display_announcement_bar", "options") == "true" : false;
 
 	if ($show_announcement_bar) {
 		get_template_part("templates/parts/announcement-bar");
-	
 	}
 });
 
-// add_action("wp_get_attachment_image_src", function($image, $attachment_id, $size, $icon) {
+add_filter( 'post_thumbnail_html', function( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+if ( empty( $html ) ) {
+	$image = function_exists('get_field') ? wp_get_attachment_image_url(get_field("fallback_image", "options"), 'medium') : '';
+	return sprintf(
+		'<img src="%s" height="%s" width="%s" />',
+		$image,
+		get_option( 'thumbnail_size_w' ),
+		get_option( 'thumbnail_size_h' )
+	);
+}
 
-// 	$image[0] = "https://placehold.co/600x400";
-// 	return $image;
-// }, 10, 4);
-
-
-   add_filter( 'post_thumbnail_html', function( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-	if ( empty( $html ) ) {
-		$image = wp_get_attachment_image_url(get_field("fallback_image", "options"), 'medium');
-	   return sprintf(
-		   '<img src="%s" height="%s" width="%s" />',
-		   $image,
-		   get_option( 'thumbnail_size_w' ),
-		   get_option( 'thumbnail_size_h' )
-	   );
-   }
-   
-   return $html;
-   }, 20, 5 );
-
-register_block_style(
-	'core/group',
-	array(
-		'name'  => 'breakout',
-		'label' => __( 'Breakout', 'textdomain' ),
-	)
-);
-
-register_block_style(
-	'core/group',
-	array(
-		'name'  => 'constrained',
-		'label' => __( 'Constrained', 'textdomain' ),
-	)
-);
-
-register_block_style(
-	'core/image',
-	array(
-		'name'  => 'grayscale',
-		'label' => __( 'Grayscale', 'textdomain' ),
-	)
-);
-
-register_block_style(
-	'core/post-featured-image',
-	array(
-		'name'  => 'rounded-top',
-		'label' => __( 'Rounded Top', 'textdomain' ),
-	)
-);
-
-register_block_style('core/list-item', array(
-	array(
-		'name' => 'star-marker',
-		'label' => __( 'Star Marker', 'textdomain' ),
-	)
-));
-
-
-register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'textdomain'),
-    'footer_navigation' => __('Footer Navigation', 'textdomain'),
-]);
-
+return $html;
+}, 20, 5 );

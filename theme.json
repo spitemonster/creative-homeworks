@@ -65,7 +65,7 @@
             "defaultDuotone": false,
             "defaultGradients": false,
             "defaultPalette": false,
-            "custom": false,
+            "custom": true,
             "palette": [
                 {
                     "color": "rgba(0,0,0,1)",
@@ -96,11 +96,6 @@
                     "color": "rgb(245, 245, 245, 1)",
                     "name": "White",
                     "slug": "white"
-                },
-                {
-                    "color": "rgb(255, 255, 255, 1)",
-                    "name": "Full White",
-                    "slug": "full-white"
                 },
                 {
                     "color": "rgb(255, 255, 255, 1)",
@@ -259,6 +254,7 @@
                     "size": "2.986rem"
                 }
             ],
+            "lineHeight": true,
             "fontFamilies": [
                 {
                     "fontFace": [
@@ -341,8 +337,12 @@
                     "margin": true
                 },
                 "border": {
-                    "color": true
-                }
+                    "color": false,
+                    "radius": true,
+                    "style": true,
+                    "width": true
+                },
+                "appearanceTools": true
             },
             "core/buttons": {
                 "spacing": {
@@ -371,12 +371,18 @@
                 "spacing": {
                     "margin": true,
                     "padding": true
+                },
+                "typography": {
+                    "lineHeight": true
                 }
             },
             "core/heading": {
                 "spacing": {
                     "margin": true,
                     "padding": true
+                },
+                "typography": {
+                    "lineHeight": true
                 }
             },
             "core/row": {
@@ -395,11 +401,33 @@
                     "style": true,
                     "color": true,
                     "radius": true
+                },
+                "dimensions": {
+                    "aspectRatio": true
                 }
             },
             "core/gallery": {
                 "color": {
                     "caption": true
+                }
+            },
+            "core/list": {
+                "appearanceTools": true
+            },
+            "core/media-text": {
+                "spacing": {
+                    "margin": true,
+                    "padding": true
+                }
+            },
+            "core/cover": {
+                "dimensions": {
+                    "aspectRatio": true,
+                    "minHeight": true
+                },
+                "appearanceTools": true,
+                "background": {
+                    "backgroundSize": true
                 }
             }
         }
@@ -420,10 +448,15 @@
             "core/group": {
                 "spacing": {
                     "padding": {
-                        "top": "var(--wp--preset--spacing--xxlarge)",
-                        "bottom": "var(--wp--preset--spacing--xxlarge)",
-                        "left": "0",
-                        "right": "0"
+                        "left": "var(--wp--preset--spacing--xlarge)",
+                        "right": "var(--wp--preset--spacing--xlarge)"
+                    }
+                }
+            },
+            "core/image": {
+                "spacing": {
+                    "margin": {
+                        "bottom": "0"
                     }
                 }
             }

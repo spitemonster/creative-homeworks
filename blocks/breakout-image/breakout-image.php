@@ -8,6 +8,10 @@
 		"style" => ''
 	]));
 
+	if (!function_exists('get_field')) {
+		return "can't get field";
+	}
+
 	$img = get_field("image");
 	$width = get_field("width");
 	$alignment = get_field("alignment");

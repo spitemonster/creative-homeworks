@@ -1,5 +1,10 @@
 <?php
 
+if (!function_exists('get_field')) {
+	return "can't get field";
+}
+
+
 	$content = get_field("announcement_content", "options");
 	$link = get_field("announcement_bar_link", "options");
 	$can_close = get_field("announcement_bar_can_close", "options") == "true";

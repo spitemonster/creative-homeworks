@@ -21,7 +21,7 @@ extract(
 	$image = get_the_post_thumbnail_url($post, 'medium');
 
 	if (empty($image)) {
-		$image = wp_get_attachment_image_url(get_field("fallback_image", "options"), 'medium');
+		$image = function_exists('get_field') ? wp_get_attachment_image_url(get_field("fallback_image", "options"), 'medium') : '';
 	}
 
 	$tags = get_the_terms($post->id, "tag");

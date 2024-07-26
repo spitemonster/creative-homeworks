@@ -10,8 +10,9 @@ function custom_block($block_name, $args = array())
 
 function render_custom_block($block, $content = '', $is_preview = false, $post_id = 0)
 {
+
 	$block_name             = str_replace('acf/', '', $block['name']);
-	$fields                 = get_fields() ?: array();
+	$fields                 = function_exists('get_fields') ? get_fields() : array();
 	$is_jsx                 = !empty($block['supports']['jsx']);
 	$class_name             = !empty($block['className']) ? $block['className'] : '';
 	$InnerBlocks            = !empty($block['InnerBlocks']) ? $block['InnerBlocks'] : '<InnerBlocks />';

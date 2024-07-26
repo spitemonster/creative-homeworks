@@ -8,6 +8,11 @@
 		"style" => ''
 	]));
 
+	if (!function_exists('get_field')) {
+		return "can't get field";
+	}
+
+
 	$icon = get_field("icon");
 	$inline = get_field("inline") == "true";
 	$height = get_field("height");

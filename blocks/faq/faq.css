@@ -38,6 +38,12 @@
             }
         }
 
+        .faq-content {
+            font-size: var(--wp--preset--font-size--small);
+            line-height: 1.5;
+            color: var(--wp--preset--color--slate-gray);
+        }
+
         &[open] {
             summary {
                 &::after {

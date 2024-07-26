@@ -8,6 +8,10 @@
 		"style" => ''
 	]));
 
+	if (!function_exists('get_field')) {
+		return "can't get field";
+	}
+
 	$class = implode(" ", array_filter([
 		"faq",
 		$class_name

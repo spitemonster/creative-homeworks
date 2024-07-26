@@ -6,6 +6,10 @@
 		])
 	);
 
+	if (!function_exists('get_field')) {
+		return "can't get field";
+	}
+
 	if (empty($atts)) {
 		$atts = ["class" => "testimonial-card"];
 	} else {

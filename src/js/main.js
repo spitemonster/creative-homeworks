@@ -1,40 +1,19 @@
 import '@appnest/masonry-layout'
 
-window.addEventListener('DOMContentLoaded', () => {
-    const isEditor =
-        typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined'
-
-    const header = document.querySelector('.site-header')
-    const announcementBar = document.querySelector('.announcement-bar')
-    const announcementBarClose = document.querySelector(
+function setupAnnouncementBar(announcementBar) {
+    const announcementBarClose = announcementBar.querySelector(
         '.announcement-bar__close'
     )
 
-    const menuItemsWithChildren = document.querySelectorAll(
-        '.wp-block-navigation-item.has-child'
-    )
-
-    if (sessionStorage.getItem('announcement-bar-closed') != true) {
+    if (!announcementBarClose) {
         announcementBar.classList.add('show')
+        return
     }
 
-    menuItemsWithChildren.forEach((c) => {
-        const b = c.querySelector('button')
-        const child = c.querySelector('.wp-block-navigation-submenu')
-        const height = child.offsetHeight
-
-        c.addEventListener('mouseover', () => {
-            header.style.setProperty('--submenu-height', `${height}px`)
-        })
-
-        c.addEventListener('mouseenter', () => {
-            b.setAttribute('aria-expanded', true)
-        })
-
-        c.addEventListener('mouseleave', () => {
-            b.setAttribute('aria-expanded', false)
-        })
-    })
+    // if we don't have this item in session storage or it's not true, show the announcement bar
+    if (sessionStorage.getItem('announcement-bar-closed') != 'true') {
+        announcementBar.classList.add('show')
+    }
 
     announcementBarClose.addEventListener('click', (e) => {
         e.preventDefault()
@@ -42,6 +21,45 @@ window.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem('announcement-bar-closed', true)
 
         announcementBar.classList.remove('show')
+    })
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const isEditor =
+        typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined'
+
+    const announcementBar = document.querySelector('.announcement-bar')
+
+    if (announcementBar) {
+        setupAnnouncementBar(announcementBar)
+    }
+
+    const header = document.querySelector('.site-header')
+
+    const menuItemsWithChildren = document.querySelectorAll(
+        '.wp-block-navigation-item.has-child'
+    )
+
+    menuItemsWithChildren.forEach((c) => {
+        const b = c.querySelector('button')
+        const child = c.querySelector('.wp-block-navigation-submenu')
+        const height = child.offsetHeight
+
+        console.log(c)
+
+        c.addEventListener('mouseover', (e) => {
+            header.style.setProperty('--submenu-height', `${height}px`)
+            console.log('mouseover')
+        })
+
+        c.addEventListener('mouseenter', (e) => {
+            console.log('entered')
+            b.setAttribute('aria-expanded', true)
+        })
+
+        c.addEventListener('mouseleave', (e) => {
+            b.setAttribute('aria-expanded', false)
+        })
     })
 
     const tags = document.querySelectorAll('.wp-block-post-terms a')
@@ -96,11 +114,4 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     headerContainer.append(navToggle)
-
-    // setup header hover menu display
-    // const menuItemsWithChildren = document.querySelectorAll('.wp-block-navigation-item.has-child');
-
-    // menuItemsWithChildren.forEach(i => {
-
-    // });
 })

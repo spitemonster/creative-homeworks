@@ -449,10 +449,13 @@
                 "spacing": {
                     "padding": {
                         "left": "var(--global-inline-padding)",
-                        "right": "var(--global-inline-padding)"
+                        "right": "var(--global-inline-padding)",
+                        "top": "0",
+                        "bottom": "0"
                     },
                     "margin": {
-                        "top": "0"
+                        "top": "0",
+                        "bottom": "0"
                     }
                 }
             },

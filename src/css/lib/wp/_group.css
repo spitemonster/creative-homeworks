@@ -33,4 +33,8 @@
             padding-inline: 0;
         }
     }
+
+    & > .wp-block-group {
+        padding-block: 0;
+    }
 }

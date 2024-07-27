@@ -23,7 +23,9 @@
         "@rollup/plugin-node-resolve": "^15.2.3",
         "@wordpress/blocks": "^12.33.0",
         "autoprefixer": "^10.4.19",
+        "postcss-comment": "^2.0.0",
         "postcss-nesting": "^12.1.2",
+        "postcss-scss": "^4.0.9",
         "rollup-plugin-folder-input": "^1.0.1",
         "rollup-plugin-postcss": "^4.0.2"
     },

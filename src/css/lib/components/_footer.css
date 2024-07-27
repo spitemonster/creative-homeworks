@@ -1,0 +1,33 @@
+@media (min-width: 961px) {
+    .site-footer {
+        padding-block: var(--wp--preset--spacing--large);
+    }
+}
+
+@media (max-width: 960px) {
+    .site-footer {
+        padding-block: var(--wp--preset--spacing--medium);
+
+        button {
+            display: none;
+            pointer-events: none;
+        }
+
+        nav {
+            justify-content: flex-start;
+            padding: 0;
+        }
+
+        .wp-block-navigation__responsive-container {
+            display: block;
+        }
+
+        .wp-block-navigation__container {
+            li,
+            a {
+                align-self: flex-start;
+                text-align: left;
+            }
+        }
+    }
+}

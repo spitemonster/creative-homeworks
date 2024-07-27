@@ -5,4 +5,23 @@
         ).is-style-breakout {
         max-width: none;
     }
+
+    .block-library-block__reusable-block-container {
+        max-width: none !important;
+    }
+
+    /* fix media text image with image fill style not showing image */
+    .wp-block-media-text {
+        position: static !important;
+
+        figure.wp-block-media-text__media {
+            position: static !important;
+        }
+    }
+
+    /* fix for blocks inheriting a spacer out of nowhere */
+    .wp-block {
+        margin-top: 0;
+        margin-block-start: 0;
+    }
 }

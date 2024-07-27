@@ -39,7 +39,7 @@
         gap: var(--wp--preset--spacing--medium);
 
         &.is-style-image-fill {
-            padding-inline: var(--wp--preset--spacing--xlarge);
+            padding-inline: var(--global-inline-padding);
 
             img {
                 position: relative;

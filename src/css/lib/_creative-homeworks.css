@@ -12,6 +12,12 @@
     }
 }
 
+@media (max-width: 400px) {
+    :root {
+        --global-inline-padding: var(--wp--preset--spacing--medium);
+    }
+}
+
 :where(body .is-layout-constrained) > * {
     margin-block-start: unset;
     margin-block-end: unset;

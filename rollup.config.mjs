@@ -40,6 +40,8 @@ let config = [
         plugins: [
             postcss({
                 extract: true,
+                minimize: true,
+                syntax: 'postcss-scss',
                 plugins: [postcssImport(), autoprefixer(), postcssNesting()],
             }),
         ],
@@ -53,9 +55,9 @@ let config = [
             postcss({
                 extract: true,
                 minimize: true,
-                plugins: [autoprefixer(), postcssNesting()],
+                syntax: 'postcss-scss',
+                plugins: [postcssImport(), autoprefixer(), postcssNesting()],
             }),
-            postcssNesting(),
         ],
     },
 ]
@@ -75,8 +77,13 @@ blocks.forEach((b) => {
                 postcss({
                     extract: true,
                     minimize: true,
+                    syntax: 'postcss-scss',
+                    plugins: [
+                        postcssImport(),
+                        autoprefixer(),
+                        postcssNesting(),
+                    ],
                 }),
-                postcssNesting(),
             ],
         })
     }

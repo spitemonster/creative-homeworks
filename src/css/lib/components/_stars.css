@@ -1,0 +1,19 @@
+.stars {
+    position: relative;
+
+    path {
+        fill: var(--wp--preset--color--orange);
+    }
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: calc((1 - var(--rating) / 5) * 100%);
+        /* background: red; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        backdrop-filter: grayscale(100%);
+    }
+}

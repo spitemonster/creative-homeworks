@@ -1,0 +1,14 @@
+.icon-block {
+    display: inline-block;
+    height: var(--height);
+    width: var(--width);
+    transform: rotate(var(--rotation));
+
+    height svg {
+        position: absolute;
+    }
+
+    path {
+        fill: currentColor;
+    }
+}

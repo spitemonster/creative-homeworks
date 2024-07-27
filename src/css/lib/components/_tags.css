@@ -1,0 +1,19 @@
+.tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    margin-block: var(--wp--preset--font-size--small);
+    flex-wrap: wrap;
+    font-size: var(--wp--preset--font-size--small);
+
+    li {
+        margin: 0;
+        background: var(--wp--preset--color--light-medium-gray);
+        padding-inline: 0.25rem;
+        border-radius: 0.25rem;
+        white-space: nowrap;
+        color: var(--wp--preset--color--med-blue);
+        font-weight: bold;
+    }
+}

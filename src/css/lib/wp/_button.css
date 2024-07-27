@@ -1,0 +1,291 @@
+.wp-block-button {
+    .wp-block-button__link {
+        transition: all 120ms ease;
+    }
+
+    &.is-style-outline {
+        .wp-block-button__link {
+            &.has-black-background-color {
+                border-color: var(--wp--preset--color--black);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--black
+                    ) !important;
+
+                    color: var(--wp--preset--color--white) !important;
+                }
+            }
+
+            &.has-dark-gray-background-color {
+                border-color: var(--wp--preset--color--dark-gray);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--white) !important;
+                    background-color: var(
+                        --wp--preset--color--dark-gray
+                    ) !important;
+                }
+            }
+            &.has-slate-gray-background-color {
+                border-color: var(--wp--preset--color--slate-gray);
+                background-color: transparent !important;
+
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--white) !important;
+                    background-color: var(
+                        --wp--preset--color--slate-gray
+                    ) !important;
+                }
+            }
+            &.has-med-gray-background-color {
+                border-color: var(--wp--preset--color--med-gray);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--black) !important;
+                    background-color: var(
+                        --wp--preset--color--med-gray
+                    ) !important;
+                }
+            }
+            &.has-light-gray-background-color {
+                border-color: var(--wp--preset--color--light-gray);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--black) !important;
+                    background-color: var(
+                        --wp--preset--color--light-gray
+                    ) !important;
+                }
+            }
+            &.has-white-background-color {
+                border-color: var(--wp--preset--color--white);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--black) !important;
+                    background-color: var(
+                        --wp--preset--color--white
+                    ) !important;
+                }
+            }
+            &.has-full-white-background-color {
+                border-color: var(--wp--preset--color--full-white);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--black) !important;
+                    background-color: var(
+                        --wp--preset--color--full-white
+                    ) !important;
+                }
+            }
+            &.has-light-blue-background-color {
+                border-color: var(--wp--preset--color--light-blue);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--black) !important;
+                    background-color: var(
+                        --wp--preset--color--light-blue
+                    ) !important;
+                }
+            }
+            &.has-dark-blue-background-color {
+                border-color: var(--wp--preset--color--dark-blue);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--white) !important;
+                    background-color: var(
+                        --wp--preset--color--dark-blue
+                    ) !important;
+                }
+            }
+            &.has-med-blue-background-color {
+                border-color: var(--wp--preset--color--med-blue);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--black) !important;
+                    background-color: var(
+                        --wp--preset--color--med-blue
+                    ) !important;
+                }
+            }
+            &.has-purple-background-color {
+                border-color: var(--wp--preset--color--purple);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--white) !important;
+                    background-color: var(
+                        --wp--preset--color--purple
+                    ) !important;
+                }
+            }
+            &.has-green-background-color {
+                border-color: var(--wp--preset--color--green);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--white) !important;
+                    background-color: var(
+                        --wp--preset--color--green
+                    ) !important;
+                }
+            }
+            &.has-orange-background-color {
+                border-color: var(--wp--preset--color--orange);
+                background-color: transparent !important;
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    color: var(--wp--preset--color--white) !important;
+                    background-color: var(
+                        --wp--preset--color--orange
+                    ) !important;
+                }
+            }
+        }
+    }
+
+    &.is-style-fill {
+        .wp-block-button__link {
+            &.has-black-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--dark-gray
+                    ) !important;
+                }
+            }
+            &.has-dark-gray-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--black
+                    ) !important;
+                }
+            }
+            &.has-slate-gray-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--dark-gray
+                    ) !important;
+                }
+            }
+            &.has-med-gray-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--dark-gray
+                    ) !important;
+                }
+            }
+            &.has-light-gray-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--med-gray
+                    ) !important;
+                }
+            }
+            &.has-white-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--light-gray
+                    ) !important;
+                }
+            }
+            &.has-full-white-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--light-gray
+                    ) !important;
+                }
+            }
+            &.has-light-blue-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--trans-blue
+                    ) !important;
+                }
+            }
+            &.has-dark-blue-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--med-blue
+                    ) !important;
+                }
+            }
+            &.has-med-blue-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--dark-blue
+                    ) !important;
+                }
+            }
+            &.has-purple-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--trans-purple
+                    ) !important;
+                }
+            }
+            &.has-green-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--trans-green
+                    ) !important;
+                }
+            }
+            &.has-orange-background-color {
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    background-color: var(
+                        --wp--preset--color--trans-orange
+                    ) !important;
+                }
+            }
+        }
+    }
+}

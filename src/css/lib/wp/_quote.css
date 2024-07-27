@@ -1,0 +1,12 @@
+.wp-block-quote {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+
+    cite {
+        color: var(--wp--preset--color--medium-gray);
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

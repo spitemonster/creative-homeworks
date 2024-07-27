@@ -1,0 +1,11 @@
+.link-block {
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+    height: 100%;
+    width: 100%;
+
+    .wp-block-group {
+        height: 100%;
+    }
+}

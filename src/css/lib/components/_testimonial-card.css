@@ -1,0 +1,28 @@
+.testimonial-card {
+    padding: var(--wp--preset--spacing--xsmall);
+    border: 2px solid var(--wp--preset--color--light-gray);
+    border-radius: var(--wp--preset--spacing--xxsmall);
+
+    cite {
+        display: flex;
+        align-items: center;
+        margin-top: var(--wp--preset--spacing--xxsmall);
+        gap: var(--wp--preset--spacing--xxsmall);
+
+        p {
+            margin-top: 0;
+        }
+
+        img {
+            height: calc(var(--wp--preset--spacing--small) * 2);
+            border-radius: 50%;
+            display: block;
+        }
+    }
+}
+
+masonry-layout {
+    .testimonial-card {
+        margin-bottom: var(--wp--preset--spacing--small);
+    }
+}

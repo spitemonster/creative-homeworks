@@ -1,0 +1,13 @@
+.wp-block-image {
+    img {
+        border-radius: var(--wp--preset--spacing--xxsmall);
+    }
+
+    &.is-style-grayscale {
+        filter: grayscale(100%);
+    }
+
+    figcaption {
+        background: none;
+    }
+}

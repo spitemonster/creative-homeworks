@@ -1,0 +1,18 @@
+:root {
+    --font-size-base: clamp(1rem, 0.625vw + 0.75rem, 1.25rem);
+    font-size: var(--font-size-base);
+    --global-inline-padding: var(--wp--preset--spacing--small);
+
+    min-height: 0vw;
+}
+
+@media (max-width: 1140px) {
+    :root {
+        --global-inline-padding: var(--wp--preset--spacing--xlarge);
+    }
+}
+
+:where(body .is-layout-constrained) > * {
+    margin-block-start: unset;
+    margin-block-end: unset;
+}

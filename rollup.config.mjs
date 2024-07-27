@@ -1,6 +1,7 @@
 import postcss from 'rollup-plugin-postcss'
 import postcssNesting from 'postcss-nesting'
 import autoprefixer from 'autoprefixer'
+import postcssImport from 'postcss-import'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { babel } from '@rollup/plugin-babel'
@@ -39,8 +40,7 @@ let config = [
         plugins: [
             postcss({
                 extract: true,
-                minimize: true,
-                plugins: [autoprefixer(), postcssNesting()],
+                plugins: [postcssImport(), autoprefixer(), postcssNesting()],
             }),
         ],
     },
@@ -53,6 +53,7 @@ let config = [
             postcss({
                 extract: true,
                 minimize: true,
+                plugins: [autoprefixer(), postcssNesting()],
             }),
             postcssNesting(),
         ],

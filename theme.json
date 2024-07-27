@@ -448,8 +448,11 @@
             "core/group": {
                 "spacing": {
                     "padding": {
-                        "left": "var(--wp--preset--spacing--xlarge)",
-                        "right": "var(--wp--preset--spacing--xlarge)"
+                        "left": "var(--global-inline-padding)",
+                        "right": "var(--global-inline-padding)"
+                    },
+                    "margin": {
+                        "top": "0"
                     }
                 }
             },
@@ -457,6 +460,13 @@
                 "spacing": {
                     "margin": {
                         "bottom": "0"
+                    }
+                }
+            },
+            "core/list": {
+                "spacing": {
+                    "padding": {
+                        "left": "0"
                     }
                 }
             }

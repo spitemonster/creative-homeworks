@@ -24,6 +24,10 @@ function setupAnnouncementBar(announcementBar) {
     })
 }
 
+function setupGravityForm(form) {
+    form.style.display = ''
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     const isEditor =
         typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined'

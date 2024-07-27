@@ -1,0 +1,5 @@
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    background: none;
+    color: inherit;
+    position: relative;
+}

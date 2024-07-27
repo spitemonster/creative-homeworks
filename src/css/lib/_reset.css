@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+
+    &:not(path):not(img):not(.wp-block-column):not(.wp-block-spacer):not(
+            rect
+        ):not(input):not(.wp-block-separator):not(
+            [id*='gform_visibility_test']
+        ):not(.gform_wrapper *):empty {
+        display: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

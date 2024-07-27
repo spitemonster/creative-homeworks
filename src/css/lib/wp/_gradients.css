@@ -1,0 +1,74 @@
+@media (max-width: 1312px) {
+    .has-med-blue-right-gradient-background {
+        background: linear-gradient(
+            180deg,
+            white 50%,
+            var(--wp--preset--color--med-blue) 50%
+        ) !important;
+    }
+
+    .has-med-blue-left-gradient-background {
+        background: linear-gradient(
+            180deg,
+            var(--wp--preset--color--med-blue) 50%,
+            white 50%
+        ) !important;
+    }
+
+    .has-dark-blue-right-gradient-background {
+        background: linear-gradient(
+            180deg,
+            white 50%,
+            var(--wp--preset--color--dark-blue) 50%
+        ) !important;
+    }
+    .has-dark-blue-left-gradient-background {
+        background: linear-gradient(
+            180deg,
+            var(--wp--preset--color--dark-blue) 50%,
+            white 50%
+        ) !important;
+    }
+    .has-purple-right-gradient-background {
+        background: linear-gradient(
+            180deg,
+            white 50%,
+            var(--wp--preset--color--purple) 50%
+        ) !important;
+    }
+    .has-purple-left-gradient-background {
+        background: linear-gradient(
+            180deg,
+            var(--wp--preset--color--purple) 50%,
+            white 50%
+        ) !important;
+    }
+    .has-green-right-gradient-background {
+        background: linear-gradient(
+            180deg,
+            white 50%,
+            var(--wp--preset--color--green) 50%
+        ) !important;
+    }
+    .has-green-left-gradient-background {
+        background: linear-gradient(
+            180deg,
+            var(--wp--preset--color--green) 50%,
+            white 50%
+        ) !important;
+    }
+    .has-orange-right-gradient-background {
+        background: linear-gradient(
+            180deg,
+            white 50%,
+            var(--wp--preset--color--orange) 50%
+        ) !important;
+    }
+    .has-orange-left-gradient-background {
+        background: linear-gradient(
+            180deg,
+            var(--wp--preset--color--orange) 50%,
+            white 50%
+        ) !important;
+    }
+}

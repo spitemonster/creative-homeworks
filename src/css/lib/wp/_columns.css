@@ -1,0 +1,20 @@
+.wp-block-columns {
+    padding-inline: var(--wp--preset--spacing--small);
+}
+
+.wp-block-column > .wp-block-group:only-child {
+    min-height: 100%;
+}
+
+@media (max-width: 1312px) {
+    .wp-block-columns {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 961px) {
+    .wp-block-columns {
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+    }
+}

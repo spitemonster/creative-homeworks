@@ -1,0 +1,71 @@
+.post-card {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    border-radius: var(--wp--preset--spacing--xxsmall);
+    overflow: hidden;
+    transition: all 120ms ease;
+
+    figcaption {
+        padding-bottom: var(--wp--preset--spacing--small);
+    }
+
+    .excerpt {
+        font-size: var(--wp--preset--font-size--small);
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &:hover {
+        background: var(--wp--preset--color--dark-blue);
+        color: var(--wp--preset--color--white);
+
+        .tags li {
+            color: var(--wp--preset--color--light-blue);
+        }
+    }
+
+    @container (width > 600px) {
+        /* background: orange; */
+
+        & > li {
+            overflow: clip;
+        }
+
+        figure {
+            display: flex;
+            flex-direction: row;
+
+            .tags {
+                margin-top: 0;
+                margin-bottom: var(--wp--preset--spacing--xsmall);
+            }
+
+            figcaption {
+                padding-block: var(--wp--preset--spacing--small);
+            }
+
+            img {
+                display: block;
+                width: 33%;
+                height: 100%;
+                object-fit: cover;
+                flex-shrink: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            figcaption {
+                margin-left: calc(33% + var(--wp--preset--spacing--xxsmall));
+            }
+        }
+    }
+}

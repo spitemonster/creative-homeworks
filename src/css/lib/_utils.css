@@ -1,0 +1,8 @@
+.visually-hidden {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+    opacity: 0.01;
+    height: 1px;
+    width: 1px;
+}

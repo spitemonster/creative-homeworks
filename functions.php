@@ -61,6 +61,22 @@ add_action('init', function() {
 		)
 	);
 
+	register_block_style(
+		'core/list',
+		array(
+			'name' => 'check-icon',
+			'label' => __('Check Icon', 'textdomain')
+		)
+	);
+
+	register_block_style(
+		'core/list-item',
+		array(
+			'name' => 'check-icon',
+			'label' => __('Check Icon', 'textdomain')
+		)
+	);
+
 	register_nav_menus([
 		'primary_navigation' => __('Primary Navigation', 'textdomain'),
 		'footer_navigation' => __('Footer Navigation', 'textdomain'),
@@ -83,6 +99,9 @@ add_action('after_setup_theme', function () {
 
 	add_theme_support('editor-styles');
 	add_theme_support( 'wp-block-styles' );
+});
+
+add_action('admin_init', function() {
 	add_editor_style('assets/css/main.css');
 	add_editor_style('assets/css/editor.css');
 });
@@ -117,7 +136,7 @@ add_action(
             true
         );
     },
-    15
+    10
 );
 
 add_action("wp_body_open", function() {
@@ -141,3 +160,4 @@ if ( empty( $html ) ) {
 
 return $html;
 }, 20, 5 );
+

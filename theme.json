@@ -55,6 +55,11 @@
                     "name": "3X-Large",
                     "size": "6rem",
                     "slug": "xxxlarge"
+                },
+                {
+                    "name": "Global Inline",
+                    "size": "var(--global-inline-padding)",
+                    "slug": "global-inline"
                 }
             ]
         },
@@ -454,6 +459,55 @@
                         "bottom": "0"
                     },
                     "margin": {
+                        "top": "0",
+                        "bottom": "0"
+                    },
+                    "blockGap": "0"
+                }
+            },
+            "core/columns": {
+                "spacing": {
+                    "padding": {
+                        "left": "0",
+                        "right": "0",
+                        "top": "0",
+                        "bottom": "0"
+                    },
+                    "blockGap": "0"
+                }
+            },
+            "core/column": {
+                "spacing": {
+                    "padding": {
+                        "left": "0",
+                        "right": "0",
+                        "top": "0",
+                        "bottom": "0"
+                    }
+                }
+            },
+            "core/row": {
+                "spacing": {
+                    "padding": {
+                        "left": "0",
+                        "right": "0",
+                        "top": "0",
+                        "bottom": "0"
+                    },
+                    "blockGap": "0"
+                }
+            },
+            "core/heading": {
+                "spacing": {
+                    "padding": {
+                        "left": "0",
+                        "right": "0",
+                        "top": "0",
+                        "bottom": "0"
+                    },
+                    "margin": {
+                        "left": "0",
+                        "right": "0",
                         "top": "0",
                         "bottom": "0"
                     }

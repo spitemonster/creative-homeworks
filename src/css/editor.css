@@ -8,6 +8,12 @@
 
     .block-library-block__reusable-block-container {
         max-width: none !important;
+
+        & > .wp-block-query {
+            max-width: var(--wp--style--global--content-size) !important;
+            margin-inline: auto;
+            padding-inline: var(--global-inline-padding);
+        }
     }
 
     /* fix media text image with image fill style not showing image */

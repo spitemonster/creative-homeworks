@@ -12,9 +12,16 @@
 		return "can't get field";
 	}
 
+	if (!empty($block["fontSize"])) {
+		// WP hyphenates heading class names, i.e. has-h-6-font-size, so this just inserts a hyphen where needed
+		$class_name = $class_name . " has-" . preg_replace('/([a-zA-Z])([0-9])/', '$1-$2', $block["fontSize"]) . "-font-size";
+	}
+
+	$heading_size = get_field("heading_size") ?: "";
+
 	$class = implode(" ", array_filter([
 		"faq",
-		$class_name
+		$class_name,
 	]));
 
 	$style = get_block_styles($block);
@@ -33,7 +40,7 @@
 	<div <?= $att_string ?>>
 		<?php foreach ($faqs as $faq): ?>
 			<details>
-				<summary><?= $faq->post_title; ?></summary>
+				<summary class="<?= $heading_size; ?>"><?= $faq->post_title; ?></summary>
 				<div class="faq-content">
 					<?= $faq->post_content; ?>
 				</div>

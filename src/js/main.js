@@ -118,4 +118,17 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     headerContainer.append(navToggle)
+
+    // setup email fields to validate on change rather than waiting for submit
+    document
+        .querySelectorAll('.gform_fields input[type="email"]')
+        .forEach((f) => {
+            f.addEventListener('blur', (e) => {
+                const valid = e.target.validity.valid
+
+                if (valid) {
+                    e.target.setAttribute('aria-invalid', false)
+                }
+            })
+        })
 })

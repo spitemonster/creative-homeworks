@@ -2,7 +2,7 @@
     position: relative;
 
     path {
-        fill: var(--wp--preset--color--orange);
+        fill: #fe9000;
     }
 
     &::after {

@@ -6,8 +6,9 @@
         & + & {
             margin-top: 1rem;
         }
+
         summary {
-            font-size: var(--wp--preset--font-size--h-6);
+            /* font-size: var(--wp--preset--font-size--h-6); */
             font-weight: bold;
 
             cursor: pointer;
@@ -15,6 +16,7 @@
             user-select: none;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding-right: 2rem;
 
             &::-webkit-details-marker {
@@ -39,7 +41,7 @@
         }
 
         .faq-content {
-            font-size: var(--wp--preset--font-size--small);
+            /* font-size: var(--wp--preset--font-size--small); */
             line-height: 1.5;
             color: var(--wp--preset--color--slate-gray);
         }

@@ -62,6 +62,14 @@ add_action('init', function() {
 	);
 
 	register_block_style(
+		'core/media-text',
+		array(
+			'name' => 'image-fill-alt',
+			'label' => __('Image Fill Mobile Reverse', 'textdomain')
+		)
+	);
+
+	register_block_style(
 		'core/list',
 		array(
 			'name' => 'check-icon',

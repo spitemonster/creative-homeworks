@@ -1,6 +1,7 @@
 @media (min-width: 961px) {
     .wp-block-media-text {
-        &.is-style-image-fill {
+        &.is-style-image-fill,
+        &.is-style-image-fill-alt {
             img {
                 position: absolute;
                 top: 0;
@@ -38,7 +39,8 @@
         flex-direction: column;
         gap: var(--wp--preset--spacing--medium);
 
-        &.is-style-image-fill {
+        &.is-style-image-fill,
+        &.is-style-image-fill-alt {
             padding-inline: var(--global-inline-padding);
 
             img {
@@ -50,6 +52,10 @@
 
         .wp-block-media-text__content {
             padding-inline: 0;
+        }
+
+        &.is-style-image-fill-alt {
+            flex-direction: column-reverse;
         }
     }
 }

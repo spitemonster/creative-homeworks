@@ -9,7 +9,7 @@
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -30,6 +30,39 @@
             "elements": "",
             "bidirectional": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_66e20e6952153",
+            "label": "Heading Size",
+            "name": "heading_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "has-base-font-size": "Base",
+                "has-xsmall-font-size": "X-Small",
+                "has-small-font-size": "Small",
+                "has-h-6-font-size": "H6",
+                "has-h-5-font-size": "H5",
+                "has-h-4-font-size": "H4",
+                "has-h-3-font-size": "H3",
+                "has-h-2-font-size": "H2",
+                "has-h-1-font-size": "H1"
+            },
+            "default_value": "has-h-6-font-size",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -50,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717008245
+    "modified": 1726091098
 }

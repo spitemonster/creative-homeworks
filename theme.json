@@ -519,13 +519,6 @@
                         "bottom": "0"
                     }
                 }
-            },
-            "core/list": {
-                "spacing": {
-                    "padding": {
-                        "left": "0"
-                    }
-                }
             }
         }
     }

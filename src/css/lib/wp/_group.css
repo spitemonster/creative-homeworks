@@ -1,8 +1,18 @@
 .wp-block-group {
     overflow: clip;
 
+    & > .wp-block-group {
+        padding: 0;
+    }
+
     &.is-style-constrained {
         max-width: calc(var(--wp--style--global--content-size) * 0.66);
+    }
+
+    @media (max-width: 1140px) {
+        & > .wp-block-group {
+            padding-inline: var(--global-inline-padding);
+        }
     }
 
     &.is-style-breakout {
@@ -32,9 +42,5 @@
         & > .wp-block-columns {
             padding-inline: 0;
         }
-    }
-
-    & > .wp-block-group {
-        padding-block: 0;
     }
 }

@@ -9,3 +9,9 @@
 @import 'wp/_post-featured-image';
 @import 'wp/_post-template';
 @import 'wp/_quote';
+@import 'wp/_spacer';
+
+/* reset some stupid default wordpress stuff */
+:root :where(.is-layout-flow) > * {
+    margin-block-start: unset;
+}

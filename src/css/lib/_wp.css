@@ -11,6 +11,10 @@
 @import 'wp/_quote';
 @import 'wp/_spacer';
 
+:root {
+    --wp--preset--font-size--xsmall: 0.75rem;
+}
+
 /* reset some stupid default wordpress stuff */
 :root :where(.is-layout-flow) > * {
     margin-block-start: unset;

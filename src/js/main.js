@@ -66,30 +66,6 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    const tags = document.querySelectorAll('.wp-block-post-terms a')
-
-    let prev = 6
-    const tagColorOptions = [
-        'tag-blue',
-        'tag-green',
-        'tag-purple',
-        'tag-orange',
-    ]
-
-    tags.forEach((t) => {
-        let randi = Math.floor(Math.random() * tagColorOptions.length)
-        // ensure no two colors end up in a row
-        while (randi == prev) {
-            randi = Math.floor(Math.random() * tagColorOptions.length)
-        }
-
-        prev = randi
-
-        const rand = tagColorOptions[randi]
-
-        t.classList.add(rand)
-    })
-
     if (isEditor) {
         const linkBlocks = document.querySelectorAll('.link-block')
         linkBlocks.forEach((l) => {

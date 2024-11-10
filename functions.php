@@ -169,3 +169,47 @@ if ( empty( $html ) ) {
 return $html;
 }, 20, 5 );
 
+// add custom accent colors to p
+add_filter('render_block', function($block_content, $block) {
+    if ($block['blockName'] === 'core/post-terms') {
+        $post_id = get_the_ID();
+
+        $terms = get_the_terms($post_id, 'project-type');
+
+        if ($terms && !is_wp_error($terms)) {
+            foreach ($terms as $term) {
+                $text_color = get_field('text_color', $term);
+				$border_color = get_field('border_color', $term);
+				$background_color = get_field('background_color', $term);
+
+				$style = '';
+
+				if ($text_color) {
+					$style .= 'color:' . esc_attr($text_color) . ';';
+				}
+
+				if ($border_color) {
+					$style .= ' border-color: ' . esc_attr($border_color) . ';';
+				}
+
+				if ($background_color) {
+					$style .= ' background-color: ' . esc_attr($background_color) . ';';
+				}
+
+
+				if (!empty($style)) {
+                    // get the link for the term and use regex to find the matching anchor element to which we want to apply custom styles
+                    $term_link = get_term_link($term);
+                    $block_content = preg_replace(
+                        '/<a([^>]*?href=["\']' . preg_quote($term_link, '/') . '["\'][^>]*)>/',
+                        '<a$1 style="' . $style . '">',
+                        $block_content,
+                        1
+                    );
+                }
+            }
+        }
+    }
+
+    return $block_content;
+}, 10, 2);

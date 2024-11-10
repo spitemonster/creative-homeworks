@@ -1,0 +1,79 @@
+{
+    "key": "group_6730f3b768c6e",
+    "title": "Project Type: Accent Color",
+    "fields": [
+        {
+            "key": "field_6730f3b706f56",
+            "label": "Text Color",
+            "name": "text_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6730f8b23334b",
+            "label": "Background Color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6730f8c63334c",
+            "label": "Border Color",
+            "name": "border_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "project-type"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1731265032
+}

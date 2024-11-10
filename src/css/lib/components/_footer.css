@@ -1,6 +1,10 @@
 @media (min-width: 961px) {
     .site-footer {
         padding-block: var(--wp--preset--spacing--large);
+
+        nav li + li {
+            margin-top: 0;
+        }
     }
 }
 
@@ -20,6 +24,7 @@
 
         .wp-block-navigation__responsive-container {
             display: block;
+            position: relative;
         }
 
         .wp-block-navigation__container {

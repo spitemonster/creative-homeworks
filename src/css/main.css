@@ -5,3 +5,12 @@
 @import 'lib/_wp';
 @import 'lib/_components';
 @import 'lib/_cleanup';
+
+/* .site-footer nav {
+    display: none !important;
+} */
+
+main.wp-block-group {
+    padding-left: 0;
+    padding-right: 0;
+}

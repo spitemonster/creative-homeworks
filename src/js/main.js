@@ -1,5 +1,3 @@
-import '@appnest/masonry-layout'
-
 function setupAnnouncementBar(announcementBar) {
     const announcementBarClose = announcementBar.querySelector(
         '.announcement-bar__close'
@@ -24,22 +22,7 @@ function setupAnnouncementBar(announcementBar) {
     })
 }
 
-function setupGravityForm(form) {
-    form.style.display = ''
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    const isEditor =
-        typeof wp !== 'undefined' && typeof wp.blocks !== 'undefined'
-
-    const announcementBar = document.querySelector('.announcement-bar')
-
-    if (announcementBar) {
-        setupAnnouncementBar(announcementBar)
-    }
-
-    const header = document.querySelector('.site-header')
-
+function setupMenu(header) {
     const menuItemsWithChildren = document.querySelectorAll(
         '.wp-block-navigation-item.has-child'
     )
@@ -65,21 +48,9 @@ window.addEventListener('DOMContentLoaded', () => {
             b.setAttribute('aria-expanded', false)
         })
     })
+}
 
-    if (isEditor) {
-        const linkBlocks = document.querySelectorAll('.link-block')
-        linkBlocks.forEach((l) => {
-            l.addEventListener('click', (e) => {
-                e.preventDefault()
-            })
-        })
-    }
-
-    // create responsive menu button
-
-    const headerContainer = document.querySelector(
-        '.site-header .wp-block-group:not(.is-style-breakout)'
-    )
+function setupHeader(headerContainer) {
     const navToggle = document.createElement('button')
     navToggle.id = 'nav-toggle'
     navToggle.innerHTML = `
@@ -94,6 +65,46 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     headerContainer.append(navToggle)
+}
+
+function setupGravityForm(form) {
+    form.style.display = ''
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const isEditor = typeof wp !== undefined && typeof wp.blocks !== undefined
+
+    console.log('is editor?? ', isEditor)
+    console.log(typeof wp)
+
+    const announcementBar = document.querySelector('.announcement-bar')
+
+    if (announcementBar) {
+        setupAnnouncementBar(announcementBar)
+    }
+
+    if (isEditor) {
+        const linkBlocks = document.querySelectorAll('.link-block')
+        linkBlocks.forEach((l) => {
+            l.addEventListener('click', (e) => {
+                e.preventDefault()
+            })
+        })
+    }
+
+    // create responsive menu button and setup menu
+    const header = document.querySelector('.site-header')
+    if (header) {
+        setupMenu(header)
+    }
+
+    const headerContainer = document.querySelector(
+        '.site-header .wp-block-group:not(.is-style-breakout)'
+    )
+
+    if (headerContainer) {
+        setupHeader(headerContainer)
+    }
 
     // setup email fields to validate on change rather than waiting for submit
     document
@@ -107,4 +118,22 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             })
         })
+})
+
+// set editor css property for styles that rely on it
+wp.domReady(() => {
+    const observer = new MutationObserver(() => {
+        const editorArea = document.querySelector('.editor-styles-wrapper')
+        let currentWidth = 0
+
+        if (editorArea && editorArea.clientWidth > currentWidth) {
+            currentWidth = editorArea.clientWidth
+            document.body.style.setProperty(
+                '--editor-area-width',
+                `${currentWidth}px`
+            )
+        }
+    })
+
+    observer.observe(document.body, { childList: true, subtree: true })
 })

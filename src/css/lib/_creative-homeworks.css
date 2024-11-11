@@ -11,6 +11,13 @@
     --font-size-4xl: calc(var(--font-size-base) * pow(var(--type-scale), 5));
 
     --global-inline-padding: var(--wp--preset--spacing--small);
+    --contained-horizontal-padding: max(
+        calc(
+            ((100vw - var(--wp--style--global--content-size)) / 2) +
+                var(--global-inline-padding)
+        ),
+        var(--global-inline-padding)
+    );
     min-height: 0vw;
 }
 

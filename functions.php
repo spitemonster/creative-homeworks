@@ -85,6 +85,14 @@ add_action('init', function() {
 		)
 	);
 
+	register_block_style(
+		'core/group',
+		array(
+			'name' => 'contained-half',
+			'label' => __('Contained Half', 'textdomain')
+		)
+	);
+
 	register_nav_menus([
 		'primary_navigation' => __('Primary Navigation', 'textdomain'),
 		'footer_navigation' => __('Footer Navigation', 'textdomain'),
@@ -146,6 +154,17 @@ add_action(
     },
     10
 );
+
+// run scripts in the editor
+add_action( 'enqueue_block_editor_assets', function() {
+    wp_enqueue_script(
+        'editor-scripts',
+        asset_path('js/main.js'),
+        array( 'wp-blocks' ),
+        THEME_VERSION,
+        true
+    );
+});
 
 add_action("wp_body_open", function() {
 	$show_announcement_bar = function_exists('get_field') ? get_field("display_announcement_bar", "options") == "true" : false;

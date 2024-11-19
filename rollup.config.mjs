@@ -33,6 +33,14 @@ let config = [
         plugins: [resolve(), commonjs(), babel({ babelHelpers: 'bundled' })],
     },
     {
+        input: './src/js/editor.js',
+        output: {
+            file: './assets/js/editor.js',
+            format: 'iife',
+        },
+        plugins: [resolve(), commonjs(), babel({ babelHelpers: 'bundled' })],
+    },
+    {
         input: './src/css/main.css',
         output: {
             file: './assets/css/main.css',

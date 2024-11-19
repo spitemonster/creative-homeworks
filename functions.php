@@ -119,7 +119,6 @@ add_action('after_setup_theme', function () {
 
 add_action('admin_init', function() {
 	add_editor_style('assets/css/main.css');
-	add_editor_style('assets/css/editor.css');
 });
 
 add_action('widgets_init', function () {
@@ -159,11 +158,13 @@ add_action(
 add_action( 'enqueue_block_editor_assets', function() {
     wp_enqueue_script(
         'editor-scripts',
-        asset_path('js/main.js'),
+        asset_path('js/editor.js'),
         array( 'wp-blocks' ),
         THEME_VERSION,
         true
     );
+
+	add_editor_style('assets/css/editor.css');
 });
 
 add_action("wp_body_open", function() {

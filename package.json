@@ -3,9 +3,11 @@
     "version": "0.0.1",
     "description": "A theme for Creative Homeworks.",
     "scripts": {
-        "dev": "rollup -c ./rollup.config.mjs -w",
-        "build": "rollup -c ./rollup.config.mjs",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "npm run clean && npm run rollup-watch",
+        "build": "npm run clean && npm run rollup",
+        "rollup": "rollup -c ./rollup.config.mjs",
+        "rollup-watch": "rollup -c ./rollup.config.mjs -w",
+        "clean": "rm -rf ./assets/blocks/"
     },
     "author": "",
     "browserslist": [
@@ -27,11 +29,9 @@
         "postcss-nesting": "^12.1.2",
         "postcss-scss": "^4.0.9",
         "rollup-plugin-folder-input": "^1.0.1",
-        "rollup-plugin-postcss": "^4.0.2"
-    },
-    "dependencies": {
-        "@appnest/masonry-layout": "^2.2.3",
+        "rollup-plugin-postcss": "^4.0.2",
         "postcss-import": "^16.1.0",
         "rollup-plugin-watch": "^1.0.4"
-    }
+    },
+    "dependencies": {}
 }

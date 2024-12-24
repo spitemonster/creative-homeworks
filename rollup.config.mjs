@@ -7,13 +7,12 @@ import commonjs from '@rollup/plugin-commonjs'
 import { babel } from '@rollup/plugin-babel'
 import fs from 'fs'
 
+// function names should be self explanatory
 function getDirectories(path) {
     return fs.readdirSync(path).filter(function (file) {
         return fs.statSync(path + '/' + file).isDirectory()
     })
 }
-
-const blocks = getDirectories('./blocks/')
 
 function fileExists(name) {
     try {
@@ -23,6 +22,9 @@ function fileExists(name) {
     }
 }
 
+const blocks = getDirectories('./blocks/')
+
+// probably a more efficient method for setting up config but ¯\_(ツ)_/¯
 let config = [
     {
         input: './src/js/main.js',
@@ -70,11 +72,13 @@ let config = [
     },
 ]
 
+// add custom blocks to config
 blocks.forEach((b) => {
     const cssInput = `blocks/${b}/${b}.css`
     const jsInput = `blocks/${b}/${b}.js`
     const bConfig = []
 
+    // only attempt to register of css file exists
     if (fileExists(cssInput)) {
         bConfig.push({
             input: `blocks/${b}/${b}.css`,
@@ -96,6 +100,7 @@ blocks.forEach((b) => {
         })
     }
 
+    // same with js
     if (fileExists(jsInput)) {
         bConfig.push({
             input: `blocks/${b}/${b}.js`,

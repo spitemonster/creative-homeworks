@@ -1,6 +1,6 @@
 # Creative Homeworks
 
-a wordpress block theme built for creative homeworks
+a wordpress block(ish) theme built for creative homeworks.
 
 ## installation
 
@@ -12,6 +12,10 @@ npm install
 npm run watch // watch updates to core and block css
 npm run build // build all core and block assets
 ```
+
+## requirements
+
+this theme requires the advanced custom fields for the included custom blocks. this is the only requirement and some effort is underway to convert this to a full wp core block theme.
 
 ## usage
 

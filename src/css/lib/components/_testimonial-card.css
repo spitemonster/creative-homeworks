@@ -1,13 +1,25 @@
 .testimonial-card {
     padding: var(--wp--preset--spacing--xsmall);
-    border: 2px solid var(--wp--preset--color--light-gray);
-    border-radius: var(--wp--preset--spacing--xxsmall);
+    border-radius: 0.25rem;
+    background: var(--wp--preset--color--full-white);
+    padding: var(--wp--preset--spacing--large)
+        var(--wp--preset--spacing--medium);
+    height: 100%;
 
     cite {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         margin-top: var(--wp--preset--spacing--xxsmall);
         gap: var(--wp--preset--spacing--xxsmall);
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: var(--wp--preset--spacing--xxsmall);
+        }
 
         p {
             margin-top: 0;
@@ -17,12 +29,66 @@
             height: calc(var(--wp--preset--spacing--small) * 2);
             border-radius: 50%;
             display: block;
+            height: 1.5rem;
         }
+    }
+
+    h3 {
+        color: var(--wp--preset--color--custom-martinique);
+        margin: 0;
+        font-style: initial;
+    }
+
+    .content {
+        margin-top: var(--wp--preset--spacing--xsmall);
+        font-size: var(--wp--preset--font-size--small);
+        color: var(--wp--preset--color--slate-gray);
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: var(--line-clamp); /* number of lines to show */
+        line-clamp: var(--line-clamp);
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .location {
+        font-size: var(--wp--preset--font-size--xsmall);
+        color: var(--wp--preset--color--slate-gray);
+        font-style: initial;
+    }
+
+    .read-more {
+        display: block;
+        margin-top: 1rem;
+        color: var(--wp--preset--color--med-blue);
     }
 }
 
-masonry-layout {
-    .testimonial-card {
-        margin-bottom: var(--wp--preset--spacing--small);
+.lightbox-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    display: none;
+}
+
+.lightbox {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+}
+
+body.lightbox-shown {
+    overflow: hidden;
+    .lightbox-container {
+        display: block;
     }
 }

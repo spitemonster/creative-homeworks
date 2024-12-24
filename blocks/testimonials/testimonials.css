@@ -1,11 +1,26 @@
 .testimonials {
-    ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--wp--preset--spacing--small);
-        list-style: none;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--wp--preset--spacing--small);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li {
         margin: 0;
-        padding: 0;
-        width: 100%;
+    }
+
+    & + a {
+        color: var(--wp--preset--color--black);
+        text-align: right;
+        display: block;
+        margin-top: var(--wp--preset--spacing--large);
+        font-size: var(--wp--preset--font-size--h-4);
+    }
+
+    @media (max-width: 960px) {
+        display: flex;
+        flex-direction: column;
     }
 }

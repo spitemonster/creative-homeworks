@@ -47,13 +47,13 @@ add_action('init', function()
 		  "not_found" => __("No Testimonials found."),
 		  "not_found_in_trash" => __("No Testimonials found in Trash."),
 		],
-		"has_archive" => false,
+		"has_archive" => true,
 		"supports" => ["title", "thumbnail", "excerpt", "editor"],
 		"public" => true,
 		"menu_icon" => "dashicons-star-filled",
 		"menu_position" => 6,
 		"show_in_rest" => true,
-		"rewrite" => ["slug" => "testimonials", "with_front" => false],
+		"rewrite" => ["slug" => "testimonials", "with_front" => true],
 	]);
 
 	register_post_type("faq", [
@@ -72,11 +72,11 @@ add_action('init', function()
 		  "not_found_in_trash" => __("No Frequently Asked Questions found in Trash."),
 		],
 		"has_archive" => false,
+		"publicly_queryable"  => false,
 		"supports" => ["title", "thumbnail", "excerpt", "editor"],
 		"public" => true,
 		"menu_icon" => "dashicons-editor-ul",
 		"menu_position" => 6,
-		"show_in_rest" => true,
-		"rewrite" => ["slug" => "faqs", "with_front" => false],
+		"show_in_rest" => false,
 	]);
 });

@@ -24,10 +24,7 @@ add_action("init", function()
       "hierarchical" => false,
       "show_in_rest" => true,
       "show_admin_column" => true,
-      "rewrite" => [
-        "slug" => "project-type",
-        "with_front" => true,
-      ],
+      "publicly_queryable" => false
     ]
   );
 });

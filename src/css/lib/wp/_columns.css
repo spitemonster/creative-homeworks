@@ -1,9 +1,14 @@
 .wp-block-columns {
     padding-inline: var(--wp--preset--spacing--small);
-}
 
-.wp-block-column > .wp-block-group:only-child {
-    min-height: 100%;
+    & > .wp-block-group:only-child {
+        min-height: 100%;
+    }
+
+    &.is-style-breakout {
+        max-width: none;
+        padding-inline: 0;
+    }
 }
 
 @media (max-width: 1312px) {

@@ -1,0 +1,14 @@
+.archive-testimonials {
+    ul {
+        column-count: 3;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    .testimonial-card {
+        --line-clamp: 3;
+        break-inside: avoid;
+    }
+}

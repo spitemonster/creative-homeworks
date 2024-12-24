@@ -1,7 +1,7 @@
 {
     "apiVersion": 2,
     "name": "testimonials",
-    "title": "Testimonial Grid",
+    "title": "Testimonials",
     "description": "Display a number of testimonials.",
     "category": "",
     "icon": "",

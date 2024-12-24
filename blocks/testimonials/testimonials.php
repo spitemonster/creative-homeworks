@@ -20,24 +20,39 @@
 
 	$style = get_block_styles($block);
 
+	$testimonials = get_field("testimonials");
+	$line_clamp = get_field("line_clamp");
+	$columns = get_field("columns");
+
+	$line_clamp = empty($line_clamp) ? 1 : $line_clamp;
+
+	$columns = empty($columns) ? 3 : $columns;
+
+	if (empty($style)) {
+		$style = '--columns: ' . $columns;
+	} else {
+		$style .= " --columns: " . $columns;
+	}
+
 	$atts = array_filter(["class" => $class, "id" => $id, "style" => $style]);
 	$att_string = implode(" ", array_map(function ($key, $value) {
 		return "$key='$value'";
 	}, array_keys($atts), $atts));
 
-	$testimonials = get_field("testimonials");
+	
 
 	// Add a condition here for the block to render; this is just a placeholder
 	if(!empty($testimonials)):
 ?>
-
-	<div <?= $att_string ?>>
-		<masonry-layout>
-			<?php foreach ($testimonials as $testimonial): ?>
-					<?php get_template_part("templates/parts/testimonial-card", null, [ "testimonial" => $testimonial ]); ?>
+<div>
+<ul <?= $att_string ?>>
+	<?php foreach ($testimonials as $testimonial): ?>
+					<li><?php get_template_part("templates/parts/testimonial-card", null, [ "testimonial" => $testimonial, "line_clamp" => $line_clamp ]); ?></li>
 			<?php endforeach; ?>
-		</masonry-layout>
-	</div>
+	</ul>
+	<a href="/testimonials">See all 50+ reviews</a>
+</div>
+	
 
 <?php elseif ($is_preview): ?>
 	<p class="d-inline-block p-2 border border-danger text-danger">Please populate all required fields to preview.</p>

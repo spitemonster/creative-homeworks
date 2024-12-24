@@ -1,26 +1,32 @@
 <?php
 /**
- * Title: Query
- * Slug: creative-homeworks/query
- * Categories: posts
+ * Title: Testimonial Query
+ * Slug: creative-homeworks/testimonial-query
+ * Categories: testimonials
  * Block Types: core/post-conent, core/query, core/post-title
  *
  * @package creative-homeworks
  * @since 1.0.0
  */
 ?>
-
 <!-- wp:query {"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"constrained"}} -->
-<div class="wp-block-query">
+<div class="wp-block-query archive-testimonials">
 	
 	<!-- wp:post-template -->
-		<!-- wp:post-title {"level":2,"isLink":true} /-->
-		<!-- wp:post-featured-image {"isLink":true} /-->
-		<!-- wp:pattern {"slug":"creative-homeworks/hidden-post-meta"} /-->
-		<!-- wp:post-excerpt {"moreText":"Read more"} /-->
-		<!-- wp:spacer {"height":"1rem"} -->
-		<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-		<!-- /wp:spacer -->
+	 <blockquote class="testimonial-card">
+		<cite>
+		<div>
+				<img src="/wp-content/uploads/2024/06/google-logo-brandmark.png" alt="Google Logo">
+
+				<?php get_template_part("templates/parts/stars", null); ?>
+			</div>
+				<!-- wp:post-title {"level":3} /-->
+		</cite>
+		<div class="content">
+			<?= get_the_excerpt() ?>
+		</div>
+		<a class="read-more" href="<?= get_the_permalink() ?>">Read more</a>
+	</blockquote>
 	<!-- /wp:post-template -->
 	<!-- wp:query-no-results -->
 	<!-- wp:paragraph --><p><?php esc_html_e( 'No results found.', 'creative-homeworks'); ?></p><!-- /wp:paragraph -->

@@ -10,6 +10,7 @@
 @import 'wp/_post-template';
 @import 'wp/_quote';
 @import 'wp/_spacer';
+@import 'wp/_categories-list';
 
 :root {
     --wp--preset--font-size--xsmall: 0.75rem;

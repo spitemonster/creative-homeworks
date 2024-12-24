@@ -1,0 +1,21 @@
+.wp-block-categories-list {
+    margin: 0;
+    padding: 0;
+    gap: var(--wp--preset--spacing--small);
+    display: flex;
+    list-style: none;
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        line-height: 1;
+        font-size: var(--wp--preset--font-size--xsmall);
+        text-decoration: none;
+        border: 2px solid;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        color: inherit;
+    }
+}

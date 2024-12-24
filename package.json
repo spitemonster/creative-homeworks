@@ -1,6 +1,6 @@
 {
     "name": "creative-homeworks",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "A theme for Creative Homeworks.",
     "scripts": {
         "dev": "npm run clean && npm run rollup-watch",

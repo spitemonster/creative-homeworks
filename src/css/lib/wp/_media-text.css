@@ -5,7 +5,9 @@
         .wp-block-media-text__content {
             padding-inline: 0;
         }
-        &.is-style-image-fill {
+
+        &.is-style-image-fill,
+        &.is-style-image-fill-alt {
             img {
                 position: absolute;
                 top: 0;
@@ -35,13 +37,42 @@
         flex-direction: column;
         gap: var(--wp--preset--spacing--medium);
 
-        &.is-style-image-fill {
+        &.is-style-image-fill,
+        &.is-style-image-fill-alt {
             padding-inline: var(--global-inline-padding);
 
             img {
                 position: relative;
                 top: unset;
                 width: 100%;
+            }
+        }
+
+        &.is-style-image-fill {
+            &.has-media-on-the-right {
+                figure {
+                    order: 2;
+                }
+            }
+
+            &:not(.has-media-on-the-right) {
+                figure {
+                    order: -1;
+                }
+            }
+        }
+
+        &.is-style-image-fill-alt {
+            &.has-media-on-the-right {
+                figure {
+                    order: 0;
+                }
+            }
+
+            &:not(.has-media-on-the-right) {
+                figure {
+                    order: 2;
+                }
             }
         }
 

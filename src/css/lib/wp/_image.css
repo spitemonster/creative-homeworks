@@ -1,6 +1,6 @@
 .wp-block-image {
     img {
-        border-radius: var(--wp--preset--spacing--xxsmall);
+        /* border-radius: var(--wp--preset--spacing--xxsmall); */
     }
 
     &.is-style-grayscale {
@@ -9,5 +9,11 @@
 
     figcaption {
         background: none;
+    }
+
+    &:not(.is-style-caption-visible) {
+        figcaption {
+            display: none;
+        }
     }
 }

@@ -15,7 +15,9 @@
             },
             "core/columns": {
                 "spacing": {
-                    "blockGap": true
+                    "blockGap": true,
+                    "margin": true,
+                    "padding": true
                 }
             },
             "core/cover": {

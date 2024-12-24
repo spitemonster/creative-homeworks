@@ -4,8 +4,6 @@ add_action('init', function() {
 
 	$block_styles = [
 		['core/group', 'breakout', __( 'Breakout', 'creativehomeworks' )],
-		['core/group', 'constrained', __( 'Constrained', 'creativehomeworks' )],
-		['core/group', 'contained-half', __( 'Contained Half', 'creativehomeworks' )],
 		['core/columns', 'breakout', __('Breakout', 'creativehomeworks')],
 		['core/image', 'grayscale', __( 'Grayscale', 'creativehomeworks' )],
 		['core/image', 'caption-visible', __( 'Caption Visible', 'creativehomeworks' )],

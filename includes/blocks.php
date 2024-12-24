@@ -11,22 +11,30 @@ function custom_block($block_name, $args = array())
 function render_custom_block($block, $content = '', $is_preview = false, $post_id = 0)
 {
 
-	$block_name             = str_replace('acf/', '', $block['name']);
-	$fields                 = function_exists('get_fields') ? get_fields() : array();
-	$is_jsx                 = !empty($block['supports']['jsx']);
-	$class_name             = !empty($block['className']) ? $block['className'] : '';
-	$InnerBlocks            = !empty($block['InnerBlocks']) ? $block['InnerBlocks'] : '<InnerBlocks />';
-	$block_id               = !empty($block['anchor']) ? $block['anchor'] : ($block['id'] ?: '');
-	$text_color_class       = !empty($block['textColor']) ? 'has-' . $block['textColor'] . '-color' : '';
-	$background_color_class = !empty($block['backgroundColor']) ? 'has-' . $block['backgroundColor'] . '-background-color' : '';
-	$background_color_class = !empty($block['gradient']) ? 'has-' . $block['gradient'] . '-gradient-background' : $background_color_class;
+	if (!function_exists('get_field') || !function_exists('get_fields')) {
+		return;
+	}
+
+	$block_name = str_replace('acf/', '', $block['name']);
+	$block_id = !empty($block['anchor']) ? $block['anchor'] : ($block['id'] ?: '');
+	$fields = function_exists('get_fields') ? get_fields() : array();
+	$is_jsx = !empty($block['supports']['jsx']);
+	$InnerBlocks = !empty($block['InnerBlocks']) ? $block['InnerBlocks'] : '<InnerBlocks />';
+
+	$class_name = implode(' ', array_filter([
+		!empty($block['className']) ? $block['className'] : '',
+		!empty($block['textColor']) ? 'has-' . $block['textColor'] . '-color' : '',
+		!empty($block['backgroundColor']) ? 'has-' . $block['backgroundColor'] . '-background-color' : '',
+		!empty($block['gradient']) ? 'has-' . $block['gradient'] . '-gradient-background' : ''
+	]));
+
 	$style                  = get_block_styles($block);
 
 	$args = array_filter(
 		array_merge(
 			array(
 				'block'      => $block,
-				'class_name' => $class_name . ' ' . $text_color_class . ' ' . $background_color_class,
+				'class_name' => $class_name,
 				'content'    => $is_jsx && $is_preview ? $InnerBlocks : $content,
 				'id'         => $block_id,
 				'is_preview' => $is_preview,
@@ -65,13 +73,9 @@ add_action('acf/init', function () {
 	}
 });
 
-// register acf fields from block directories
-foreach (glob(get_stylesheet_directory() . '/blocks/*/') as $block_dir) {
-	add_filter(
-		'acf/settings/load_json',
-		function ($paths) use ($block_dir) {
-			$paths[] = $block_dir;
-			return $paths;
-		}
-	);
-}
+add_filter('acf/settings/load_json', function ($paths) {
+    foreach (glob(get_stylesheet_directory() . '/blocks/*/') as $block_dir) {
+        $paths[] = $block_dir;
+    }
+    return $paths;
+});

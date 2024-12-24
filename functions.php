@@ -146,5 +146,5 @@ add_filter( 'post_thumbnail_html', function( $html, $post_id, $post_thumbnail_id
 		);
 	}
 
-	return esc_html($html);
+	return $html;
 }, 20, 5 );

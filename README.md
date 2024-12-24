@@ -7,7 +7,8 @@ a wordpress block(ish) theme built for creative homeworks.
 ```bash
 git clone https://github.com/spitemonster/creative-homeworks
 cd creative-homeworks
-rm -rf .git
+rm -rf .git // remove git data
+git init // create clean repo
 npm install
 npm run watch // watch updates to core and block css
 npm run build // build all core and block assets

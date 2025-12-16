@@ -74,8 +74,7 @@ add_action('wp_enqueue_scripts', function () {
             'main-js',
             asset_path('js/main.js'),
             [],
-            THEME_VERSION,
-            true
+            THEME_VERSION
         );
     },
     10
